@@ -46,7 +46,7 @@ for index,row in pricedf.iterrows():
     unit_num = row['Unit number']
     product_prices[unit_num] = price
     
-    def get_order_data(invoice_num, filename, directory):
+def get_order_data(invoice_num, filename, directory):
     invoice_num = int(invoice_num)
     order_data = {}
     orderwkbook = openpyxl.load_workbook(directory + filename, data_only=True)
